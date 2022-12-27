@@ -55,7 +55,7 @@ mapa = [
 
 `decompositor_type` - тип декомпозиции, применяемый для карты. Реализованы `TrapezoidalMapDecomposition` и `BoustrophedonMapDecomposition`.
 
-`area_type` - тип карты (каждая декомпозированая часть покрывается соответсвующим алгоритмом). Реализованы `ZigZagArea` и `SpanningTreesArea`.
+`area_type` - тип карты (каждая декомпозированая часть покрывается соответсвующим алгоритмом). Реализованы `ZigZagArea`, `SpiralSTCArea`, `ScanSTCArea`.
 
 `show` - надо ли рисовать карту после нахождения покрывающего пути.
 
@@ -69,7 +69,7 @@ mapa = [
 
 Декомпозиция: `Trapezoidal decomposition, Boustrophedon decomposition`
 
-Покрытие: `zig-zag, Spanning trees`
+Покрытие: `zig-zag, SpiralSTCArea, ScanSTCArea` (последние два работают при условии, что карта состоит из клеток `2x2` вместо `1x1`, при этом могут работать без декомпозиции)
 
 ## Картинки, примеры
 
@@ -98,6 +98,14 @@ mapa = [
 ### Карта из примера с `debug=True` в `coverage`
 
 ![example](./images/example.gif)
+
+### Spiral STC
+
+![spiral_STC](./images/spiral_STC.png)
+
+### Scan STC
+
+![scan_STC](./images/scan_STC.png)
 
 ## Использованные материалы
 
