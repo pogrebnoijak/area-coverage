@@ -12,14 +12,11 @@
 
 ## Установка
 
-[//]: # (FIXME git checkout coverage)
 ```bash
 git clone https://github.com/pogrebnoijak/area-coverage
-cd area-coverage
-git checkout coverage  
 ```
 
-После этого появится `coverage.ipynb` - достаточно запустить его как обычный `jupyter notebook`.
+После этого появится `area-coverage/coverage.ipynb` - достаточно запустить его как обычный `jupyter notebook`.
 
 ## Запуск
 
