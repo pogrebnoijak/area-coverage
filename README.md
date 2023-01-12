@@ -110,5 +110,35 @@ mapa = [
 
 - A Survey on Coverage Path Planning for Robotics
 - Competitive on-line coverage of grid environments by a mobile robot
-- CPP и RPP: Xu, L.: 2011, Graph Planning for Environmental Coverage,
-  Chapter 4; PhD thesis; Carnegie Mellon University.
+
+# Graph Coverage
+
+## Описание
+
+Проект, реализующий алгоритм решения [Rural Postman Problem](https://www.sciencedirect.com/science/article/abs/pii/030505489400070O), и проводящий серию экспериментов для оценки эффективности различных эвристик для алгоритма.
+
+### Пример
+
+Алгоритм определяет оптимальное множество опциональных ребер для построения цикла, проходящего по всем ребрам, и строит этот самый цикл. Ниже можно увидеть пример работы алгоритма. Обязательные ребра нарисованы черным, опциональные — синим.
+
+![boustrophedon_simple](./graph_plots/sample/all.gif)
+
+## Установка
+
+```bash
+git clone https://github.com/pogrebnoijak/area-coverage
+```
+
+После этого появится `area-coverage/graph-coverage.ipynb` - достаточно запустить его как обычный `jupyter notebook`.
+
+## Алгоритмы
+
+Реализованы алгоритмы для решения задач CPP и RPP, описанные в [Xu, L.: 2011, Graph Planning for Environmental Coverage,
+  Chapter 4; PhD thesis; Carnegie Mellon University.](https://www.ri.cmu.edu/pub_files/2011/8/thesis_xu.pdf#chapter.4).
+
+Для запуска алгоритма нужно передать ему [NetworkX](https://networkx.org/) граф (`networkx.Graph` или `networkx.MultiGraph`). Параметр `get_otp` отвечает за то, какая эвристика будет использоваться для определения порядка перебора. С помощью параметра `return_stats = True` можно получить статистику запуска.
+
+## Использованные материалы
+
+- [Xu, L.: 2011, Graph Planning for Environmental Coverage,
+  Chapter 4; PhD thesis; Carnegie Mellon University.](https://www.ri.cmu.edu/pub_files/2011/8/thesis_xu.pdf#chapter.4)
